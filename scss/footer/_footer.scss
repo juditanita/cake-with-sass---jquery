@@ -1,0 +1,196 @@
+@use "../utils" as util;
+@use "../globals" as global;
+
+footer {
+
+  border-top: util.$border-gray;
+  padding-top: 6px;
+ 
+
+  .subscribe {
+    margin: 30px;
+    background-color: global.$purple-fade;
+    padding: 20px;
+
+    @include util.width(100%, 0px, 1440px);
+
+    margin-inline: auto;
+
+    h2 {
+      font-size: 2rem;
+      text-align: center;
+    }
+
+    div {
+      padding: 2rem;
+
+      @include util.width(100%, 20px, 700px);
+      display: flex;
+      flex-wrap: wrap;
+      input {
+        padding: 1rem;
+        flex-grow: 1;
+
+        &::placeholder {
+          color: rgb(18, 72, 181);
+        }
+      }
+      button {
+        width: auto;
+        padding: 6px 12px;
+        background-color: rgb(18, 72, 181);
+        color: white;
+        border: none;
+        outline: none;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .footer-grid {
+    @include util.width(100%, 0px, 1440px);
+    background-color: black;
+   
+    padding: 30px;
+    padding-bottom: 4px;
+
+    .footer__grid__top {
+      display: grid;
+      grid-template-columns: 1fr;
+
+      margin: 0 auto;
+
+      @media screen and (min-width: 400px) {
+        grid-template-columns: 1fr 1fr;
+        gap: 2px;
+
+        &__online {
+          border-radius: 0 30px 30px 30px;
+          background-color: global.$second-bg-color;
+        }
+        &__menu {
+          border-radius: 30px 0px 30px 30px;
+          background-color: global.$second-bg-color;
+        }
+        &__shop {
+          border-radius: 30px 30px 30px 0;
+          background-color: global.$second-bg-color;
+        }
+
+        &__customer {
+          border-radius: 30px 30px 0px 30px;
+          background-color: global.$second-bg-color;
+        }
+      }
+
+      margin-bottom: 20px;
+
+      @include util.breakpoint(large) {
+        grid-template-columns: repeat(4, 1fr);
+        background-color: global.$second-bg-color;
+        width: 100%;
+
+        &__online,
+        &__menu,
+        &__shop,
+        &__customer {
+          border-radius: 30px;
+          background-color: transparent;
+          border: none;
+        }
+      }
+
+      &__online,
+      &__menu,
+      &__shop,
+      &__customer {
+        @include util.width(100%, 0, 500px);
+
+        padding: 20px;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        li {
+          padding-bottom: 5px;
+        }
+      }
+
+      // right side
+
+      &__right {
+        @include util.width(100%, 20px, 900px);
+
+        display: flex;
+
+        &__left,
+        &__right {
+          width: 50%;
+          border: util.$border-gray;
+
+          text-transform: uppercase;
+
+          li {
+            padding-bottom: 5px;
+          }
+        }
+      }
+    }
+
+    .footer-grid__second {
+      display: grid;
+      grid-template-columns: 1fr;
+      margin: 0 auto;
+      
+
+      @include util.breakpoint(large) {
+        grid-template-columns: 1fr 3fr;
+      }
+
+    
+
+      &__left {
+        background: #fff;
+        padding: 30px;
+      }
+
+      &__right {
+        display: flex;
+        justify-content: space-between;
+padding: 0;
+        color: white;
+
+        &__copyright {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          height: 100px;
+          gap: 0;
+         
+         text-align: center;
+          margin-top: auto;
+          margin-bottom: 0;
+          padding-bottom: 0;
+          box-sizing: border-box;
+        
+          justify-content: end;
+          gap: 10px;
+
+          small{
+            font-size: 1rem;
+           
+          }
+        }
+
+        &__logo {
+          width: 100px;
+          margin-top: 1rem;
+          background-image: url("../../assets/lemon-cake.png");
+          background-size: cover;
+          height: 100px;
+        }
+      }
+    }
+  }
+}

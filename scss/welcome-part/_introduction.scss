@@ -1,0 +1,123 @@
+@use "../utils" as util;
+@use "../globals" as global;
+
+.introduction {
+  background-color: global.$background-color-first;
+  @include util.width(100%, 0px, 1440px);
+  
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+
+
+h2 {
+  width: 90%;
+
+}
+
+  @include util.breakpoint(large) {
+    flex-direction: row;
+    height: 800px;
+    &__left {
+      width: 50%;
+    }
+  }
+
+  &__left,
+  &__right {
+    @include util.width(100%, 0px, 1440px);
+    padding-bottom: 10px;
+  }
+
+  &__left {
+    z-index: 2;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &__top {
+      width: 80%;
+      margin-inline: auto;
+      margin-top: 20px;
+     
+
+    
+
+      p {
+       
+        font-weight: 300;
+       
+      }
+    }
+
+   
+
+      img {
+
+        @include util.width(100%, 0px, 400px);
+        object-fit: cover;
+        
+       
+        background: #fff;
+        padding: 8px;
+      }
+    
+    
+  }
+
+  &__right {
+    height: 100%;
+
+    &__first{
+
+      
+       img{
+        background: global.$second-bg-color;
+        width: 200px;
+        padding: 10px;
+       }
+    }
+
+    @include util.breakpoint(large) {
+    
+
+    &__first {
+      padding: 30px;
+      padding-left: 3px;
+
+      .cta{
+        margin-inline: auto;
+
+      }
+     
+
+      img {
+        display: block;
+        @include util.width(100%, 0px, 400px);
+        height: 300px;
+        object-fit: cover;
+
+        padding: 5px;
+        background: #000;
+        margin-top: -60px;
+        z-index: -1;
+      }
+
+      p {
+        width: 80%;
+       
+      }
+    }
+
+    &__second {
+      img {
+        width: 200px;
+        height: 300px;
+      }
+
+   
+    }
+  }
+}
+}

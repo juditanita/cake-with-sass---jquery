@@ -1,0 +1,161 @@
+@use "colors" as color;
+@use "typography" as typo;
+
+@use '../utils' as util;
+
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 700;
+  line-height: 1.1;
+  margin-top: 0;
+  font-family: typo.$font-family-playfair;
+}
+
+h1{
+  
+  font-size: 3.75rem;
+
+  @include util.breakpoint(medium) {
+    font-size: 4.75rem;
+  }
+  @include util.breakpoint(large) {
+    font-size: 5.75rem;
+  }
+}
+
+
+h2{
+  font-size: 2.2rem;
+  text-align: center;
+  text-transform: capitalize;
+
+      line-height: 130%;
+
+      @include util.breakpoint(medium) {
+        font-size: 2.95rem;
+        width: 85%;
+      }
+      @include util.breakpoint(large) {
+        font-size: 3.15rem;
+        width: 80%;
+        line-height: 110%;
+      }
+}
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+  font-family: inherit;
+}
+
+main {
+  width: min(100% - 20px, 1350px);
+
+  margin: 10px auto 40px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+h3 {
+  color: (color.$h3-color);
+  text-transform: uppercase;
+}
+h2 {
+  color: color.$strong-purple;
+}
+
+footer li {
+  color: color.$footer-li;
+  font-weight: thin;
+}
+
+p {
+  font-family: typo.$font-family-text;
+  line-height: 120%;
+  font-size: 1.4rem;
+}
+
+
+
+.hide {
+  display: none;
+}
+
+section{
+  @include util.width(100%, 0px, 1440px);
+}
+
+.order {
+  margin-left: 30px;
+  opacity: 0.4;
+  transition: 0.2s ease-in;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.cta {
+  padding: 20px 36px;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  appearance: none;
+  background-color: color.$purple;
+  color: color.$second-bg-color;
+  float: right;
+  margin-inline: auto;
+  font-size: 1.2rem;
+
+  &.hover{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border:2px solid color.$purple;
+    color:color.$purple;
+    background-color: color.$background-color-first;
+  }
+
+}
+
+.show-img{
+  padding: 12px 24px;
+  border:2px solid color.$purple;
+  color:color.$purple;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  transition: 0.3s ease-in;
+  cursor: pointer;
+
+  &.hover{
+    background-color: color.$strong-purple;
+    color: color.$second-bg-color;
+  }
+}
+
+

@@ -1,0 +1,72 @@
+@use "../utils" as util;
+@use "../globals" as global;
+
+
+.featured {
+   
+  
+    height: auto;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-block: 50px;
+    padding-block: 50px;
+  
+   
+
+    h2{
+
+        margin-bottom: 60px;
+    }
+    &__content {
+      margin-top: 2rem;
+      width: 90%;
+      display: grid;
+      gap: 3px;
+      grid-template-columns: repeat(3, 1fr);
+      place-content: center;
+      place-self: center;
+      text-align: center;
+    }
+  
+    img {
+      max-width: 400px;
+      width: 80%;
+      
+      
+    }
+  
+
+    .featured__cakes{
+      h3{
+        color:global.$background-color-first
+      }
+
+        &:hover{
+            margin-top: -40px;
+        }
+    }
+
+    .lemon {
+    
+      padding-bottom: 1rem;
+      background-color: red;
+      
+  
+    }
+  
+      .apricot {
+        @extend .lemon;
+        
+        background-color:global.$h3-color;
+      }
+
+      .chocolate {
+        @extend .lemon;
+        
+        background-color:global.$strong-purple;
+       
+      }
+    }
+  

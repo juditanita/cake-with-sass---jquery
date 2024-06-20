@@ -1,0 +1,90 @@
+@use "../utils" as util;
+@use "../globals" as global;
+
+.about {
+  padding: 10px 30px;
+  @include util.width(100%, 0px, 1440px);
+
+  gap: 90px;
+
+  background: rgba(global.$second-bg-color, 0.3);
+
+  
+
+  &__left {
+    padding: 20px;
+   margin-bottom: 40px;
+    height: 300px;
+
+    img {
+     
+      object-fit: scale-down;
+      height: 300px;
+     
+
+      padding: 20px;
+      
+      @include util.width(100%, 0px, 500px);
+      float:right;
+    }
+  }
+
+  &__right {
+    padding: 10px;
+
+    h2 {
+      
+
+      color: rgba(global.$header-text-color, 0.9);
+    }
+
+    p {
+      white-space: wrap;
+     
+    }
+    .bold {
+      font-weight: bold;
+      color: global.$strong-purple;
+      line-height: 120%;
+    }
+
+    a {
+      color: global.$purple-fade;
+
+      &:hover {
+        font-weight: 800;
+        text-decoration: underline;
+        color: global.$strong-purple;
+      }
+    }
+  }
+
+  @include util.breakpoint(large) {
+    display: flex;
+    align-items: center;
+
+    &__left {
+      width: 40%;
+      height: auto;
+      @include util.width(40%, 4px, 540px);
+
+      margin: 0;
+
+      img {
+        @include util.width(100%, 0px, 500px);
+
+        height: 400px;
+        object-fit: cover;
+      }
+    }
+
+    &__right {
+      @include util.width(70%, 0px, 740px);
+
+      a
+      {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}

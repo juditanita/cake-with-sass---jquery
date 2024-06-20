@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="https://kit.fontawesome.com/ecce996c38.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montaga&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;1,500&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="scss/css/style.css" />
+    <title>Flowery-cake</title>
+  </head>
+  <body>
+    <header>
+      <div class="mobile-menu">
+        <div class="mobile-menu__navbar">
+          <a href="#">Rivfy</a>
+        </div>
+        <i class="fa-solid fa-bars menu" id="menuOpen"></i>
+     
+        <i
+          class="fa-solid fa-x close hidden"
+          id="menuClosed"
+        ></i>
+      </div>
+      <nav class="navbar">
+        <div class="navbar__logo">
+          <a href="#" class="navbar__logo__symb">Rifvy</a>
+        </div>
+        <ul class="navbar__ul" id="menu">
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <li>
+            <a href="#about">About</a>
+          </li>
+
+          <li>
+            <a href="#magazine">Magazines</a>
+          </li>
+          <li>
+            <a href="#contact">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <img src="assets/lemon-cake.png" alt="lemon-cake" id="lemonFade" />
+
+        <div class="hero__info">
+          <h1>Custom cakes for every occasions</h1>
+          <div class="hero__info__slogans">
+            <p>
+              <span>Rich</span>
+              <span>Velvet</span>
+              <span>Flavor</span>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="about" id="about">
+        <div class="about__left">
+          <img src="assets/11.png" alt="" />
+        </div>
+        <div class="about__right">
+          <h2>Cake artists & Workshop trainer</h2>
+          <p class="bold">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam dicta
+            exercitationem.
+          </p>
+
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus
+            voluptatibus quod neque, architecto ad, ullam nesciunt illo, magnam
+            saepe dolor dolore! Cupiditate provident, labore exercitationem sunt
+            fugiat nisi culpa quae at architecto dolorum.
+          </p>
+          <a href="">Click here for a list of upcoming shows</a>
+        </div>
+      </section>
+
+      <section class="introduction">
+        <div class="introduction__left">
+          <div class="introduction__left__top">
+            <h2>Welcome to the RFV Baking company!</h2>
+            <p>
+              We are a custom baking company Lorem ipsum dolor sit, amet
+              consectetur adipisicing elit. <br />
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            </p>
+          </div>
+          <div class="introduction__left__bottom">
+            <img src="assets/13.png" alt="" />
+          </div>
+        </div>
+        <div class="introduction__right">
+          <div class="introduction__right__first">
+            <img src="assets/16.png" alt="" />
+
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
+              praesentium, itaque adipisci amet aperiam quae recusandae
+              perferendis neque ut officia.
+            </p>
+
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid .
+            </p>
+
+            <button class="cta">
+              <a href="#contact">Calculate price</a>
+              </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="featured">
+        <h2>Featured Work</h2>
+        <p>Voted by more than 3000 customers</p>
+        <article class="featured__content">
+          <div>
+            <div class="lemon featured__cakes">
+              <h3>Strawberry</h3>
+
+              <img src="assets/cake11.png" alt="" />
+            </div>
+          </div>
+
+          <div>
+            <div class="apricot featured__cakes">
+              <h3>Madagascar Vanilla</h3>
+              <img src="assets/cake2.png" alt="" />
+            </div>
+          </div>
+
+          <div>
+            <div class="chocolate featured__cakes">
+              <h3>Fig</h3>
+              <img src="assets/cake5.png" alt="" />
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!-- mini gallery -->
+      <article class="gallery" id="magazine">
+        <h2>Read Our Magazines</h2>
+        <p>Learn trip and tricks.Find out more about receint workshops.</p>
+        <div class="mini-gallery">
+          <img src="assets/Cover2.png" alt="" />
+
+          <img src="assets/CupCakeMagazine.png" alt="" />
+          <img src="assets/Magazine3.png" alt="" />
+        </div>
+      </article>
+
+      <section class="contact" id="contact">
+        <aside class="contact__left">
+          <small>Sample price</small>
+          <div class="contact__left__calculator">
+            <div class="contact__left__calculator__first" >
+              <button class="show-img">See photos</button>
+              <div class="slide-in" id="sampleFirst">
+                <img src="assets/9.png" alt="" >
+              </div>
+              <p>3 level cake for 60 people with cream and jam, and icing.</p>
+              <p class="price">From <span>$2000</span></p>
+            </div>
+
+            <div class="contact__left__calculator__first">
+              
+              <div class="slide-in">
+                <img src="assets/2.png" alt="" >
+              </div>
+              <p>
+                Mini gluten-free cake for 30 people with dairy-free cream and
+                jam, lots of decoration.
+              </p>
+              <p class="price">From <span>$900</span></p>
+            </div>
+
+            <p class="order">
+              *Gluten, nuts and dairy free option available
+            </p>
+          </div>
+        </aside>
+        <aside class="contact__right">
+          <form>
+            <h1 class="title">Order from Us</h1>
+            <p class="order">
+              Order on over $30,000 20% available on your first order.
+            </p>
+
+            <!-- Name -->
+            <div class="form-group">
+              <input type="text" id="formName" class="" placeholder="Name" />
+            </div>
+
+            <!-- E-mail -->
+            <div class="form-group">
+              <input
+                type="email"
+                id="formEmail"
+                class=""
+                placeholder="E-mail"
+              />
+            </div>
+
+            <!-- Message -->
+            <div class="form-group message">
+              <textarea
+                id="formMessage"
+                class="form-control form-control-lg"
+                rows="7"
+                placeholder="Mensagem"
+              ></textarea>
+            </div>
+
+            <!-- Submit btn -->
+            <div class="btn-holder">
+              <button type="submit" class="cta" tabindex="-1">
+                Send message
+              </button>
+            </div>
+          </form>
+        </aside>
+      </section>
+      <section class="gallery"></section>
+    </main>
+
+    <footer>
+      <div class="subscribe">
+        <h2>For news & special offers</h2>
+        <div>
+          <input type="text" placeholder="ENTER YOUR EMAIL ADDRESS" required />
+          <button>SIGN UP</button>
+        </div>
+      </div>
+
+      <!-- menu items -->
+      <div class="footer-grid">
+        <div class="footer__grid__top">
+          <div class="footer__grid__top__online">
+            <ul>
+              <h3>online</h3>
+              <li><a href="www.facebook.com">Facebook</a></li>
+              <li><a href="www.instagram.com">Instagram</a></li>
+              <li><a href="www.pinterest.com">Pinterest</a></li>
+            </ul>
+          </div>
+          <div class="footer__grid__top__menu">
+            <ul>
+              <h3>Menu</h3>
+              <li><a href="#about">About</a></li>
+              <li><a href="#magazine">Magazine</a></li>
+              <li><a href="#features">Featured</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__grid__top__shop">
+            <ul>
+              <h3>shops</h3>
+              <li><a href="#">Los Angeles</a></li>
+              <li><a href="#">New York</a></li>
+              <li><a href="#">Miami</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__grid__top__customer">
+            <ul>
+              <h3>Customer Care</h3>
+              <li><a href="#contact">Contact</a></li>
+              <li><a href="#">FaQ</a></li>
+              <li><a href="contact">Help</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- botton  -->
+        <!-- first colun -->
+        <div class="footer-grid__second">
+          <div class="footer-grid__second__left">
+            <h2>Shop Gift Cards</h2>
+            <p>Lorem ipsum dolor sit amet consectetur.</p>
+          </div>
+
+          <!-- third col -->
+          <div class="footer-grid__second__right">
+            <div class="footer-grid__second__right__copyright">
+              <div id="date"></div>
+              <small>All right Reserved</small>
+            </div>
+            <div class="footer-grid__second__right__logo"></div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="main.js" type="text/javascript"></script>
+  </body>
+</html>

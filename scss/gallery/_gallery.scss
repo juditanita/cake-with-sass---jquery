@@ -1,0 +1,32 @@
+@use "../globals" as global;
+@use "../utils" as util;
+
+article.gallery {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 3rem;
+
+  p {
+    padding-bottom: 60px;
+    width: 80%;
+    text-align: center;
+  }
+  .mini-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+    padding-bottom: 3rem;
+
+    img {
+      width: 300px;
+      box-shadow: util.$box-shadow;
+
+      object-fit: cover;
+      margin: 0 auto;
+      background: #fff;
+    }
+  }
+}
