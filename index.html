@@ -6,7 +6,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <script src="https://kit.fontawesome.com/ecce996c38.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
     <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;1,500&display=swap"
@@ -22,20 +21,19 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="scss/css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
     <title>Flowery-cake</title>
   </head>
   <body>
-    <header>
+    <header class="sticky">
       <div class="mobile-menu">
         <div class="mobile-menu__navbar">
           <a href="#">Rivfy</a>
         </div>
         <i class="fa-solid fa-bars menu" id="menuOpen"></i>
-     
-        <i
-          class="fa-solid fa-x close hidden"
-          id="menuClosed"
-        ></i>
+
+        <i class="fa-solid fa-x close hidden" id="menuClosed"></i>
       </div>
       <nav class="navbar">
         <div class="navbar__logo">
@@ -57,6 +55,7 @@
           </li>
         </ul>
       </nav>
+   
     </header>
     <main>
       <section class="hero">
@@ -125,7 +124,7 @@
 
             <button class="cta">
               <a href="#contact">Calculate price</a>
-              </button>
+            </button>
           </div>
         </div>
       </section>
@@ -174,19 +173,18 @@
         <aside class="contact__left">
           <small>Sample price</small>
           <div class="contact__left__calculator">
-            <div class="contact__left__calculator__first" >
+            <div class="contact__left__calculator__first">
               <button class="show-img">See photos</button>
               <div class="slide-in" id="sampleFirst">
-                <img src="assets/9.png" alt="" >
+                <img src="assets/9.png" alt="" />
               </div>
               <p>3 level cake for 60 people with cream and jam, and icing.</p>
               <p class="price">From <span>$2000</span></p>
             </div>
 
             <div class="contact__left__calculator__first">
-              
               <div class="slide-in">
-                <img src="assets/2.png" alt="" >
+                <img src="assets/2.png" alt="" />
               </div>
               <p>
                 Mini gluten-free cake for 30 people with dairy-free cream and
@@ -195,9 +193,7 @@
               <p class="price">From <span>$900</span></p>
             </div>
 
-            <p class="order">
-              *Gluten, nuts and dairy free option available
-            </p>
+            <p class="order">*Gluten, nuts and dairy free option available</p>
           </div>
         </aside>
         <aside class="contact__right">

@@ -12,6 +12,8 @@
 
 .mobile-menu {
 
+ 
+
   @include util.mobileBreakpoint(small) {
     display: flex;
     align-items: center;
@@ -40,9 +42,16 @@
   display: none;
 }
 
+
+
+.sticky{
+  position: sticky;
+  top:0;
+}
 .navbar {
   @include util.mobileBreakpoint(small) {
     padding-top: 0;
+   
      display: none;
 
 
